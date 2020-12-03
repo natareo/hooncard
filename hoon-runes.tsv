@@ -1,0 +1,131 @@
+|_	spec alas (map term tome)	produces a door (a core with sample)
+|%	(unit term) (map term tome)	produces a core (battery and payload)
+|@	(unit term) (map term tome)	produces a wet core (battery and payload)
+|.	hoon	produces a trap (a core with one arm)
+|:	[hoon hoon]	produces a gate with a custom sample
+|-	hoon	produces a trap (a core with one arm) and evaluates it
+|^	hoon (map term tome)	produces a core whose battery includes a $ arm and computes the latter
+|~	[spec value]	produces an iron gate
+|*	[spec value]	produces a wet gate (a one-armed core with sample)
+|=	[spec value]	produces a dry gate (a one-armed core with sample)
+|?	hoon	produces a lead trap
+|$	(lest term) spec	produces a mold
+$@	[spec spec]	structure that normalizes a union tagged by head atom
+$:	(list spec)	forms a cell type (tuple)
+$_	hoon	structure that normalizes to an example
+$%	(list spec)	structure that recognizes a union tagged by head atom
+$^	hoon	structure that normalizes a union tagged by head depth (cell)
+$~	[hoon spec]	defines a custom type default value
+$-	[spec spec]	structure that normalizes to an example gate
+$=	[skin spec]	structure that wraps a face around another structure
+$?	(list spec)	forms a type from a union of other types
+$>	[spec spec]	structure from filter (requiring)
+$<	[spec spec]	structure from filter (excluding)
+$$	[spec (map term spec)]	structure from recursion
+$|	[spec hoon]	structure with verification
+$.	[spec (map term spec)]	structure as read–write core
+$+	[stud spec]	standard structure
+$;	hoon	manual structure
+$/	[spec (map term spec)]	structure as write-only core
+$`	[spec (map term spec)]	structure as read-only core
+$&	[spec hoon]	repaired structure
+$!	[spec (map term spec)]	structure as opaque core
+%_	[wing (list (pair wing hoon))]	resolves a wing with changes, preserving type
+%.	[hoon hoon]	calls a gate, inverted
+%^	[hoon hoon hoon hoon]	calls a gate with triple sample
+%+	[hoon hoon hoon]	calls a gate with a cell sample
+%-	[hoon hoon]	calls a gate
+%:	[hoon (list hoon)]	calls a gate with many arguments
+%~	[wing hoon hoon]	evaluates an arm in a door
+%*	[wing hoon (list (pair winghoon))]	evaluates an expression, then resolves a wing with changes
+%=	[wing (list (pair wing hoon))]	resolves a wing with changes
+:_	[hoon hoon]	constructs a cell, inverted
+:^	[hoon hoon hoon hoon]	constructs a cell, 4-tuple
+:+	[hoon hoon hoon]	constructs a cell, 3-tuple
+:-	[hoon hoon]	constructs a cell, 2-tuple
+:~	(list hoon)	constructs a null-terminated list
+:*	(list hoon)	constructs an n-tuple
+::		marks a comment (digraph, not rune)
+.+	atom	increments an atom using Nock 4
+.*	[hoon hoon]	evaluates using Nock 2
+.=	[hoon hoon]	tests for equality using Nock 5
+.?	hoon	tests for cell or atom using Nock 3
+.^	[spec hoon]	loads from namespace using Nock 12
+^|	hoon	converts a gold core to an iron core (invariant)
+^.	[hoon hoon]	typecasts on value
+^-	[spec hoon]	typecasts by explicit type label
+^+	[hoon hoon]	typecasts by inferred type (a fence)
+^&	hoon	converts a core to a zinc core (covariant)
+^~	hoon	folds constant at compile time
+^=	[skin hoon]	binds name to a value
+^?	hoon	converts a core to a lead core (bivariant)
+^*	spec	bunt, produces default mold value
+^:	spec	produces a ‘factory’ gate for a type (switch from regular parsing to spec/type parsing)
+~|	[hoon hoon]	prints in stack trace if failure
+~$	[term hoon]	profiler hit counter
+~_	[hoon hoon]	prints in stack trace, user-formatted
+~%	[chum hoon tyre hoon]	registers jet
+~/	[chum hoon]	registers jet with registered context
+~<	[$@(term [term hoon]) hoon]	raw hint, applied to product (“backward”)
+~>	[$@(term [term hoon]) hoon]	raw hint, applied to computation (“forward”)
+~+	[@ hoon]	caches a computation
+~&	[@ud hoon hoon]	prints (used for debugging)
+~?	[@ud hoon hoon hoon]	prints conditionally (used for debugging)
+~=	[hoon hoon]	detects duplicate
+~!	[hoon hoon]	prints type if compilation failure
+;:	[hoon (list hoon)]	calls a binary function as an $n$-ary function
+;<	[spec hoon hoon hoon]	glues a pipeline together (monadic bind)
+;~	[hoon (list hoon)]	glues a pipeline together with a product-sample adapter (monadic bind)
+;;	[spec hoon]	normalizes with a mold, asserting fixpoint
+;+	0	(Sail) makes a single XML node
+;*	0	(Sail) makes a list of XML nodes from Hoon expression
+;=	marl:hoot	(Sail) makes a list of XML nodes
+;/	hoon	(Sail) yields tape as XML element
+=,	[spec hoon]	combines default type value with the subject
+=.	[wing hoon hoon]	changes one leg in the subject
+=?	[wing hoon hoon hoon]	changes one leg in the subject conditionally
+=^	[skin wing hoon hoon]	pins the head of a pair; changes a leg with the tail
+=:	[(list (pair wing hoon)) hoon]	changes multiple legs in the subject
+=/	[skin hoon hoon]	combines a named noun with the subject
+=,	[skin hoon hoon]	combines a named noun with the subject, inverted
+=<	[hoon hoon]	0
+=>	[hoon hoon]	composes two expressions
+=-	[hoon hoon]	combines a new noun with the subject
+=*	[(pair term (unit spec)) hoon hoon]	defines an alias
+=,	[hoon hoon]	exposes namespace (defines a bridge)
+=+	[hoon hoon]	combines a new noun with the subject
+=~	(list hoon)	composes many expressions
+--		terminates core expression (digraph, not rune)
+'==		terminates running series of Hoon expressions (digraph, not rune)
+?|	(list hoon)	logical OR (loobean)
+?:	[hoon hoon hoon]	branches on a boolean test
+?.	[hoon hoon hoon]	branches on a boolean test, inverted
+?<	[hoon hoon]	negative assertion
+?>	[hoon hoon]	positive assertion
+?-	[wing (list (pair spec hoon))]	switches against a union, no default
+?^	[wing hoon hoon]	branches on whether a wing of the subject is a cell
+?=	[spec wing]	tests pattern match
+?#	[skin wing]	tests pattern match
+?+	[wing hoon (list (pair spec hoon))]	switches against a union, with default
+?&	(list hoon)	logical AND (loobean)
+?@	[wing hoon hoon]	branches on whether a wing of the subject is an atom
+?~	[wing hoon hoon]	branches on whether a wing of the subject is null
+?!	hoon	logical NOT (loobean)
+!:		turns on stack trace
+!.		turns off stack trace
+!,		emits AST of expression (use as !,  *hoon  expression)
+!;		emits the type for an expression using the type of type
+!>		wraps a noun in its type
+!=		makes the Nock formula for a Hoon expression
+!?		restricts Hoon version
+!!		crashes
+!<		lift dynamic value into static context
+/?	foo	pin a version number
+/-	foo, *bar, baz=qux	imports a file from the sur directory (* pinned with no face, = with specified face)
+/+	foo, *bar, baz=qux	imports a file from the lib directory (* pinned with no face, = with specified face)
+/=	clay-raw  /sys/vane/clay	imports results of user-specified path wrapped in face
+/*	myfile  %hoon  /gen/myfile/hoon	imports the contents of a file in the desk converted to a mark (build-time static data)
++|		labels a chapter (produces no arm)
++$	[term spec]	produces a structure arm (type definition)
+++	[term hoon]	produces a (normal) arm
++*	[term term spec]	produces a type constructor arm
