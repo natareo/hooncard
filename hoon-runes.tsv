@@ -87,8 +87,8 @@ $!	[spec (map term spec)]	structure as opaque core
 =^	[skin wing hoon hoon]	pins the head of a pair; changes a leg with the tail
 =:	[(list (pair wing hoon)) hoon]	changes multiple legs in the subject
 =/	[skin hoon hoon]	combines a named noun with the subject
-=,	[skin hoon hoon]	combines a named noun with the subject, inverted
-=<	[hoon hoon]	0
+=;	[skin hoon hoon]	combines a named noun with the subject, inverted
+=<	[hoon hoon]	composes two expressions, inverted
 =>	[hoon hoon]	composes two expressions
 =-	[hoon hoon]	combines a new noun with the subject
 =*	[(pair term (unit spec)) hoon hoon]	defines an alias
