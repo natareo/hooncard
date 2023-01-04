@@ -1,0 +1,131 @@
+;=	(Sail) make a list of XML nodes						
+;*	(Sail) make a list of XML nodes from Hoon expression						
+;+	(Sail) make a single XML node						
+;/	(Sail) yield tape as XML element						
+^=	bind name to a value						
+?:	branch on a boolean test						
+?.	branch on a boolean test, inverted						
+?@	branch on whether a wing of the subject is an atom						
+?~	branch on whether a wing of the subject is null						
+?^	branch on wing if subject is cell						
+^*	bunt, produce default mold value						
+~+	cache a computation						
+;:	call a binary function as an $n$-ary function						
+%-	call a gate						
+%+	call a gate with a cell sample						
+%:	call a gate with many arguments						
+%^	call a gate with triple sample						
+%.	call a gate, inverted						
+=:	change multiple legs in subject						
+=.	change one leg in subject						
+=?	change subject leg conditionally						
+=,	combine default type value with subject						
+=/	combine named noun with subject						
+=;	combine named noun with subject, inverted						
+=-	combine new noun with subject						
+=+	combine new noun with subject						
+=~	compose many expressions						
+=>	compose two expressions						
+=<	compose two expressions, inverted						
+:-	construct a cell, 2-tuple						
+:+	construct a cell, 3-tuple						
+:^	construct a cell, 4-tuple						
+:_	construct a cell, inverted						
+:~	construct a null-terminated list						
+:*	construct an n-tuple						
+^|	convert a gold core to iron (invariant)						
+^?	convert core to lead (bivariant)						
+^&	convert core to zinc (covariant)						
+!!	crash						
+$~	define a custom type default value						
+=*	define an alias						
+~=	detect duplicate						
+!,	emit AST of expression (use as !,  *hoon  expression)						
+!;	emit the type for an expression using the type of type						
+%~	evaluate an arm in a door						
+%*	evaluate expression; resolve wing w/ changes						
+.*	evaluate using Nock 2						
+=,	expose namespace (define a bridge)						
+^~	fold constant at compile time						
+$:	form a cell type (tuple)						
+$?	form a type from a union of other types						
+;<	glue a pipeline together (monadic bind)						
+;~	glue pipeline together w/  product-sample adapter (monadic bind)						
+/*	import contents of a file in desk converted to a mark (build-time static data)						
+/+	import file from lib dir. (* pinned with no face, = with specified face)						
+/-	import file from sur dir. (* pinned with no face, = with specified face)						
+/=	import results of user-specified path wrapped in face						
+.+	increment an atom using Nock 4					'==	terminate running series of Hoon expressions
++|	label a chapter (produce no arm)						
+!<	lift dynamic value into static context						
+.^	load from namespace using Nock 12						
+?&	logical AND (loobean)						
+?|	logical OR (loobean)						
+!=	make the Nock formula for a Hoon expression						
+$;	manual structure						
+::	mark a comment						
+?<	negative assertion						
+;;	normalize with a mold, asserting fixpoint						
+/?	pin a version number						
+=^	pin head of pair; change a leg with tail						
+?>	positive assertion						
+~&	print (used for debugging)						
+~?	print conditionally (debugging)						
+~|	print in stack trace if failure						
+~_	print in stack trace, user-formatted						
+~!	print type if fails compilation						
+^:	produce a ‘factory’ gate for a type (switch from regular spec/type parsing)						
+++	produce a (normal) arm						
+|%	produce a core (battery and payload)						
+|^	produce a core whose battery includes a $ arm and compute the latter						
+|_	produce a door (core with sample)						
+|=	produce a dry gate (a one-armed core with sample)						
+|:	produce a gate with a custom sample						
+|?	produce a lead trap						
+|$	produce a mold						
++$	produce a structure arm (type definition)						
+|-	produce a trap (a core with one arm) and evaluates it						
+|.	produce a trap (core with one arm)						
++*	produce a type constructor arm						
+|@	produce a wet core (battery and payload)						
+|*	produce a wet gate (a one-armed core with sample)						
+|~	produce an iron gate						
+~$	profiler hit counter						
+~>	raw hint, applied to computation (“forward”)						
+~<	raw hint, applied to product (“backward”)						
+~%	register jet						
+~/	register jet w/ registered context						
+$&	repaired structure						
+%=	resolve a wing with changes						
+%_	resolve a wing with changes, preserving type						
+!?	restrict Hoon version						
+$+	standard structure						
+$!	structure as opaque core						
+$`	structure as read-only core						
+$.	structure as read–write core						
+$/	structure as write-only core						
+$<	structure from filter (excluding)						
+$>	structure from filter (requiring)						
+$$	structure from recursion						
+$@	structure that normalizes a union tagged by head atom						
+$_	structure that normalizes to an example						
+$-	structure that normalizes to an example gate						
+$^	structure that normalizes union tagged by head depth (cell)						
+$%	structure that recognizes a union tagged by head atom						
+$=	structure that wraps a face around another structure						
+$|	structure with verification						
+?-	switch against a union, no default						
+?+	switch against a union, w/ default						
+'==	terminate  series of Hoon expressions (digraph, not rune)						
+--	terminate core expression						
+.?	test cell or atom using Nock 3						
+.=	test equality using Nock 5						
+?#	test pattern match						
+?=	test pattern match						
+?!	logical NOT (loobean)						
+!.	turn off stack trace						
+!:	turn on stack trace						
+^-	typecast by explicit type label						
+^+	typecast by inferred type (a fence)						
+^.	typecast on value						
+!>	wrap a noun in its type						

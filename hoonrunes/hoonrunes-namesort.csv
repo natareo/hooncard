@@ -1,0 +1,131 @@
+barbuc	|$	produces a mold
+barcab	|_	produces a door (a core with sample)
+barcen	|%	produces a core (battery and payload)
+barcol	|:	produces a gate with a custom sample
+bardot	|.	produces a trap (a core with one arm)
+barhep	|-	produces a trap (a core with one arm) and evaluates it
+barket	|^	produces a core whose battery includes a $ arm and computes the latter
+barpat	|@	produces a wet core (battery and payload)
+barsig	|~	produces an iron gate
+bartar	|*	produces a wet gate (a one-armed core with sample)
+bartis	|=	produces a dry gate (a one-armed core with sample)
+barwut	|?	produces a lead trap
+bucbar	$|	structure with verification
+bucbuc	$$	structure from recursion
+buccab	$_	structure that normalizes to an example
+buccen	$%	structure that recognizes a union tagged by head atom
+buccol	$:	forms a cell type (tuple)
+bucdot	$.	structure as read–write core
+bucfas	$/	structure as write-only core
+bucgal	$<	structure from filter (excluding)
+bucgar	$>	structure from filter (requiring)
+buchep	$-	structure that normalizes to an example gate
+bucket	$^	structure that normalizes a union tagged by head depth (cell)
+buclus	$+	standard structure
+bucmic	$;	manual structure
+bucpam	$&	repaired structure
+bucpat	$@	structure that normalizes a union tagged by head atom
+bucsig	$~	defines a custom type default value
+buctic	$`	structure as read-only core
+buctis	$=	structure that wraps a face around another structure
+bucwut	$?	forms a type from a union of other types
+buczap	$!	structure as opaque core
+cencab	%_	resolves a wing with changes, preserving type
+cencol	%:	calls a gate with many arguments
+cendot	%.	calls a gate, inverted
+cenhep	%-	calls a gate
+cenket	%^	calls a gate with triple sample
+cenlus	%+	calls a gate with a cell sample
+censig	%~	evaluates an arm in a door
+centar	%*	evaluates an expression, then resolves a wing with changes
+centis	%=	resolves a wing with changes
+colcab	:_	constructs a cell, inverted
+colcol	::	marks a comment (digraph, not rune)
+colhep	:-	constructs a cell, 2-tuple
+colket	:^	constructs a cell, 4-tuple
+collus	:+	constructs a cell, 3-tuple
+colsig	:~	constructs a null-terminated list
+coltar	:*	constructs an n-tuple
+dotket	.^	loads from namespace using Nock 12
+dotlus	.+	increments an atom using Nock 4
+dottar	.*	evaluates using Nock 2
+dottis	.=	tests for equality using Nock 5
+dotwut	.?	tests for cell or atom using Nock 3
+fashep	/-	imports a file from the sur directory (* pinned with no face, = with specified face)
+faslus	/+	imports a file from the lib directory (* pinned with no face, = with specified face)
+fastar	/*	imports the contents of a file in the desk converted to a mark (build-time static data)
+fastis	/=	imports results of user-specified path wrapped in face
+faswut	/?	pin a version number
+hephep	--	terminates core expression (digraph, not rune)
+ketbar	^|	converts a gold core to an iron core (invariant)
+ketcol	^:	produces a ‘factory’ gate for a type (switch from regular parsing to spec/type parsing)
+ketdot	^.	typecasts on value
+kethep	^-	typecasts by explicit type label
+ketlus	^+	typecasts by inferred type (a fence)
+ketpam	^&	converts a core to a zinc core (covariant)
+ketsig	^~	folds constant at compile time
+kettar	^*	bunt, produces default mold value
+kettis	^=	binds name to a value
+ketwut	^?	converts a core to a lead core (bivariant)
+lusbar	+|	labels a chapter (produces no arm)
+lusbuc	+$	produces a structure arm (type definition)
+luslus	++	produces a (normal) arm
+lustar	+*	produces a type constructor arm
+miccol	;:	calls a binary function as an $n$-ary function
+micfas	;/	(Sail) yields tape as XML element
+micgal	;<	glues a pipeline together (monadic bind)
+miclus	;+	(Sail) makes a single XML node
+micmic	;;	normalizes with a mold, asserting fixpoint
+micsig	;~	glues a pipeline together with a product-sample adapter (monadic bind)
+mictar	;*	(Sail) makes a list of XML nodes from Hoon expression
+mictis	;=	(Sail) makes a list of XML nodes
+sigbar	~|	prints in stack trace if failure
+sigbuc	~$	profiler hit counter
+sigcab	~_	prints in stack trace, user-formatted
+sigcen	~%	registers jet
+sigfas	~/	registers jet with registered context
+siggal	~<	raw hint, applied to product (“backward”)
+siggar	~>	raw hint, applied to computation (“forward”)
+siglus	~+	caches a computation
+sigpam	~&	prints (used for debugging)
+sigtis	~=	detects duplicate
+sigwut	~?	prints conditionally (used for debugging)
+sigzap	~!	prints type if compilation failure
+tiscol	=:	changes multiple legs in the subject
+tiscom	=,	combines default type value with the subject (spec)
+tiscom	=,	exposes namespace (defines a bridge)
+tisdot	=.	changes one leg in the subject
+tisfas	=/	combines a named noun with the subject
+tisgal	=<	composes two expressions, inverted
+tisgar	=>	composes two expressions
+tishep	=-	combines a new noun with the subject
+tisket	=^	pins the head of a pair; changes a leg with the tail
+tislus	=+	combines a new noun with the subject
+tismic	=;	combines a named noun with the subject, inverted
+tissig	=~	composes many expressions
+tistar	=*	defines an alias
+tistis	'==	terminates running series of Hoon expressions (digraph, not rune)
+tiswut	=?	changes one leg in the subject conditionally
+wutbar	?|	logical OR (loobean)
+wutcol	?:	branches on a boolean test
+wutdot	?.	branches on a boolean test, inverted
+wutgal	?<	negative assertion
+wutgar	?>	positive assertion
+wuthax	?#	tests pattern match
+wuthep	?-	switches against a union, no default
+wutket	?^	branches on whether a wing of the subject is a cell
+wutlus	?+	switches against a union, with default
+wutpam	?&	logical AND (loobean)
+wutpat	?@	branches on whether a wing of the subject is an atom
+wutsig	?~	branches on whether a wing of the subject is null
+wuttis	?=	tests pattern match
+wutzap	?!	logical NOT (loobean)
+zapcol	!:	turns on stack trace
+zapcom	!,	emits AST of expression (use as !,  *hoon  expression)
+zapdot	!.	turns off stack trace
+zapgal	!<	lift dynamic value into static context
+zapgar	!>	wraps a noun in its type
+zapmic	!;	emits the type for an expression using the type of type
+zaptis	!=	makes the Nock formula for a Hoon expression
+zapwut	!?	restricts Hoon version
+zapzap	!!	crashes
